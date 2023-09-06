@@ -1,12 +1,13 @@
 <template>
-    <div>
-        <h2>About</h2>
-    </div>
+  <Documentation />
 </template>
 <script>
-
+import Documentation from "../components/Documentation.vue";
+export default {
+  components: {
+    Documentation,
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

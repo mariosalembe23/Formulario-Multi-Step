@@ -3,7 +3,7 @@
     <form @submit="(e) => e.preventDefault()">
       <div class="grid w-full grid-cols-1 gap-5">
         <div
-          class="input-group w-full flex items-center space-x-2 bg-slate-800 px-4 rounded-md"
+          class="input-group w-full flex items-center space-x-2 dark:bg-slate-800 bg-gray-200 px-4 rounded-md"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -11,7 +11,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6 text-white"
+            class="w-6 h-6 dark:text-white text-slate-600"
           >
             <path
               stroke-linecap="round"
@@ -21,14 +21,14 @@
           </svg>
           <input
             type="text"
-            class="w-full py-3 outline-none text-white bg-transparent px-1 rounded-md font-medium"
+            class="w-full py-3 outline-none text-slate-900 dark:text-white bg-transparent px-1 rounded-md font-medium"
             name="name"
             id="name"
             placeholder="Insira seu Nome Completo"
           />
         </div>
         <div
-          class="input-group w-full flex items-center space-x-2 bg-slate-800 px-4 rounded-md"
+          class="input-group w-full flex items-center space-x-2 dark:bg-slate-800 bg-gray-200 px-4 rounded-md"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6 text-white"
+            class="w-6 h-6 dark:text-white text-slate-600"
           >
             <path
               stroke-linecap="round"
@@ -46,14 +46,14 @@
 
           <input
             type="email"
-            class="w-full py-3 outline-none text-white bg-transparent px-1 rounded-md font-medium"
+            class="w-full py-3 outline-none dark:text-white text-slate-900 bg-transparent px-1 rounded-md font-medium"
             name="email"
             id="email"
             placeholder="Insira seu E-mail"
           />
         </div>
         <div
-          class="input-group w-full flex items-center space-x-2 bg-slate-800 px-4 rounded-md"
+          class="input-group w-full flex items-center space-x-2 dark:bg-slate-800 bg-gray-200 px-4 rounded-md"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6 text-white"
+            class="w-6 h-6 dark:text-white text-slate-600"
           >
             <path
               stroke-linecap="round"
@@ -79,7 +79,7 @@
           />
           <button
             @click="showPass"
-            class="text-slate-400 transition-all hover:text-white"
+            class="dark:text-slate-400 text-slate-900 transition-all hover:text-slate-600 dark:hover:text-white"
           >
             <svg
               v-if="!isVisible"
@@ -121,7 +121,7 @@
         </div>
         <div class="w-full">
           <button
-            class="bg-slate-950 transition-all hover:bg-slate-900 text-white font-semibold w-full py-3 rounded-md"
+            class="dark:bg-cyan-700  bg-slate-900 transition-all hover:bg-slate-950 dark:hover:bg-cyan-800 text-white font-semibold w-full py-3 rounded-md"
           >
             Cadastrar
           </button>

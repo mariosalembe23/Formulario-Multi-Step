@@ -1,8 +1,8 @@
 <template>
   <main class="w-full mt-10 px-5">
     <div class="text-center">
-      <h2 class="text-slate-300 text-2xl font-extrabold">morphosis</h2>
-      <p class="text-slate-400 font-medium py-3">
+      <h2 class="dark:text-slate-300 text-slate-900 text-2xl font-extrabold">morphosis</h2>
+      <p class="dark:text-slate-400 text-slate-800 font-medium py-3">
         Seja Bem-vindo! Pronto para nova Jornada?
       </p>
     </div>

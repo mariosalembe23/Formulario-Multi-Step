@@ -1,33 +1,50 @@
 <template>
   <header
-    class="m-auto max-w-3xl w-full h-16 border-b border-slate-800 flex items-center justify-between px-5"
+    class="m-auto relative max-w-3xl w-full h-16 border-b dark:border-slate-800 border-zinc-300 flex items-center justify-between px-5"
   >
     <div>
-      <a href="#" class="font-extrabold logo text-white text-2xl">.m</a>
+      <router-link
+        to="/"
+        class="font-extrabold logo dark:text-white text-slate-900 text-2xl"
+        >.m</router-link
+      >
     </div>
     <div class="md:inline-block hidden">
       <nav>
         <ul class="flex items-center space-x-7">
-          <li :class="{ 'border-b-2 border-white': $route.path === '/' }">
+          <li
+            :class="{
+              'border-b-2 border-slate-900 dark:border-white ':
+                $route.path === '/',
+            }"
+          >
             <router-link
               to="/"
-              class="text-white link font-medium block py-5 transition-all hover:text-slate-400"
+              class="dark:text-white text-slate-900 link font-medium block py-5 transition-all dark:hover:text-slate-400 hover:text-slate-600"
               >Cadastrar</router-link
             >
           </li>
           <li
-            :class="{ 'border-b-2 border-slate-3': $route.path === '/login' }"
+            :class="{
+              'border-b-2 border-slate-900 dark:border-white':
+                $route.path === '/login',
+            }"
           >
             <router-link
               to="/login"
-              class="text-white link font-medium block py-5 transition-all hover:text-slate-400"
+              class="dark:text-white text-slate-900 link font-medium block py-5 transition-all hover:text-slate-600 dark:hover:text-slate-400"
               >Log In</router-link
             >
           </li>
-          <li :class="{ 'border-b-2 border-slate-3': $route.path === '/docs' }">
+          <li
+            :class="{
+              'border-b-2 border-slate-900 dark:border-white':
+                $route.path === '/docs',
+            }"
+          >
             <router-link
               to="/docs"
-              class="text-white link font-medium block py-5 transition-all hover:text-slate-400"
+              class="dark:text-white text-slate-900 link font-medium block py-5 transition-all hover:text-slate-600 dark:hover:text-slate-400"
               >Documentação</router-link
             >
           </li>
@@ -35,8 +52,12 @@
       </nav>
     </div>
     <div class="flex items-center space-x-3">
-      <button class="text-slate-400 transition-all hover:text-white">
+      <button
+        @click="changeModePage"
+        class="dark:text-slate-400 text-cyan-700 transition-all hover:text-slate-900 dark:hover:text-white"
+      >
         <svg
+          v-if="darkMode"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -47,28 +68,31 @@
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
-            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+            d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+          />
+        </svg>
+
+        <svg
+          v-else
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            d="M12 .75a8.25 8.25 0 00-4.135 15.39c.686.398 1.115 1.008 1.134 1.623a.75.75 0 00.577.706c.352.083.71.148 1.074.195.323.041.6-.218.6-.544v-4.661a6.714 6.714 0 01-.937-.171.75.75 0 11.374-1.453 5.261 5.261 0 002.626 0 .75.75 0 11.374 1.452 6.712 6.712 0 01-.937.172v4.66c0 .327.277.586.6.545.364-.047.722-.112 1.074-.195a.75.75 0 00.577-.706c.02-.615.448-1.225 1.134-1.623A8.25 8.25 0 0012 .75z"
+          />
+          <path
+            fill-rule="evenodd"
+            d="M9.013 19.9a.75.75 0 01.877-.597 11.319 11.319 0 004.22 0 .75.75 0 11.28 1.473 12.819 12.819 0 01-4.78 0 .75.75 0 01-.597-.876zM9.754 22.344a.75.75 0 01.824-.668 13.682 13.682 0 002.844 0 .75.75 0 11.156 1.492 15.156 15.156 0 01-3.156 0 .75.75 0 01-.668-.824z"
+            clip-rule="evenodd"
           />
         </svg>
       </button>
-      <a href="#" class="text-slate-400 transition-all hover:text-white">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-6 h-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
-          />
-        </svg>
-      </a>
+
       <button
-        class="text-slate-400 transition-all hover:text-white md:hidden inline-block"
+        @click="showItemsLink"
+        class="dark:text-slate-400 text-cyan-700 transition-all hover:text-slate-900 dark:hover:text-white inline-block md:hidden"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -81,20 +105,65 @@
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
-            d="M3.75 9h16.5m-16.5 6.75h16.5"
+            d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z"
           />
         </svg>
       </button>
     </div>
+
+    <!-- Dropdown -->
   </header>
+  <Dropdown />
 </template>
 
 <script>
+import Dropdown from "./Dropdown.vue";
 export default {
-  data() {
-    return {};
+  components: {
+    Dropdown,
   },
-  methods: {},
+  data() {
+    return {
+      darkMode: false,
+    };
+  },
+  mounted() {
+    window.addEventListener("load", this.onWindow);
+  },
+  methods: {
+    onWindow() {
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+        localStorage.theme = "dark";
+        this.darkMode = true;
+
+      } else {
+        document.documentElement.classList.remove("dark");
+        localStorage.theme = "light";
+        this.darkMode = false;
+      }
+    },
+    changeModePage() {
+      if (!document.documentElement.classList.contains("dark")) {
+        document.documentElement.classList.add("dark");
+        localStorage.theme = "dark";
+        this.darkMode = true;
+      } else {
+        document.documentElement.classList.remove("dark");
+        localStorage.theme = "light";
+        this.darkMode = false;
+      }
+    },
+    showItemsLink() {
+      const backMenu = document.querySelector(".backMenu");
+      backMenu.classList.remove("hidden");
+      backMenu.classList.add("flex");
+    },
+  },
 };
 </script>
 

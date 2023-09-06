@@ -3,7 +3,7 @@
     <form @submit="(e) => e.preventDefault()">
       <div class="grid w-full grid-cols-1 gap-5">
         <div
-          class="input-group w-full flex items-center space-x-2 bg-slate-800 px-4 rounded-md"
+          class="input-group w-full flex items-center space-x-2 bg-gray-200 dark:bg-slate-800 px-4 rounded-md"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -11,7 +11,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6 text-white"
+            class="w-6 h-6 dark:text-white text-slate-600"
           >
             <path
               stroke-linecap="round"
@@ -21,14 +21,14 @@
           </svg>
           <input
             type="email"
-            class="w-full peer py-3 outline-none text-white bg-transparent px-1 rounded-md font-medium"
+            class="w-full peer py-3 outline-none dark:text-white text-slate-900 bg-transparent px-1 rounded-md font-medium"
             name="email"
             id="email"
             placeholder="Entre com seu E-mail ou Utilizador "
           />
         </div>
         <div
-          class="input-group w-full flex items-center space-x-2 bg-slate-800 px-4 rounded-md"
+          class="input-group w-full flex items-center space-x-2 dark:bg-slate-800 bg-gray-200 px-4 rounded-md"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6 text-white"
+            class="w-6 h-6 dark:text-white text-slate-600"
           >
             <path
               stroke-linecap="round"
@@ -47,14 +47,14 @@
 
           <input
             type="password"
-            class="w-full py-3 outline-none text-white bg-transparent px-1 rounded-md font-medium"
+            class="w-full py-3 outline-none dark:text-white text-slate-900 bg-transparent px-1 rounded-md font-medium"
             name="senha"
             id="senha"
             placeholder="Digite sua Senha "
           />
           <button
             @click="showPass"
-            class="text-slate-400 transition-all hover:text-white"
+            class="dark:text-slate-400 text-slate-900 transition-all hover:text-slate-600 dark:hover:text-white"
           >
             <svg
               v-if="!isVisible"
@@ -97,18 +97,20 @@
 
         <div class="w-full">
           <button
-            class="bg-slate-950 transition-all hover:bg-slate-900 text-white font-semibold w-full py-3 rounded-md"
+            class="dark:bg-cyan-700 bg-slate-900 transition-all hover:bg-slate-950 dark:hover:bg-cyan-800 text-white font-semibold w-full py-3 rounded-md"
           >
             Entrar
           </button>
         </div>
 
         <div class="midea mt-3 text-center">
-          <p class="text-slate-300 font-medium">Ou Podes Entrar com:</p>
+          <p class="dark:text-slate-300 text-slate-800 font-medium">
+            Ou Podes Entrar com:
+          </p>
           <div class="flex items-center justify-center mt-6 space-x-3">
             <a
               href="#"
-              class="w-10 h-10 transition-all hover:bg-white hover:border-0 hover:text-slate-900 rounded-full border border-slate-600 text-white inline-block flex items-center justify-center"
+              class="w-10 h-10 transition-all dark:bg-white bg-slate-900 dark:hover:bg-white hover:bg-slate-800 dark:hover:border-0 dark:hover:text-white dark:hover:bg-transparent hover:text-slate-200 rounded-full border-0 border-gray-300 dark:text-slate-900 text-white flex items-center justify-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +124,7 @@
               </svg> </a
             ><a
               href="#"
-              class="w-10 h-10 transition-all hover:bg-white hover:border-0 hover:text-slate-900 rounded-full border border-slate-600 text-white inline-block flex items-center justify-center"
+              class="w-10 h-10 transition-all dark:bg-white bg-slate-900 dark:hover:bg-white hover:bg-slate-800 dark:hover:border-0 dark:hover:text-white dark:hover:bg-transparent hover:text-slate-200 rounded-full border-0 border-gray-300 dark:text-slate-900 text-white flex items-center justify-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +139,7 @@
             </a>
             <a
               href="#"
-              class="w-10 h-10 transition-all hover:bg-white hover:border-0 hover:text-slate-900 rounded-full border border-slate-600 text-white inline-block flex items-center justify-center"
+              class="w-10 h-10 transition-all dark:bg-white bg-slate-900 dark:hover:bg-white hover:bg-slate-800 dark:hover:border-0 dark:hover:text-white dark:hover:bg-transparent hover:text-slate-200 rounded-full border-0 border-gray-300 dark:text-slate-900 text-white flex items-center justify-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
