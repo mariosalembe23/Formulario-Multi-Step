@@ -72,7 +72,7 @@
 
           <input
             type="password"
-            class="w-full py-3 outline-none text-white bg-transparent px-1 rounded-md font-medium"
+            class="w-full py-3 outline-none dark:text-white text-slate-900 bg-transparent px-1 rounded-md font-medium"
             name="senha"
             id="senha"
             placeholder="Digite sua Senha "
