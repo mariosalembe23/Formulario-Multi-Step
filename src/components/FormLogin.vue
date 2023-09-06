@@ -110,7 +110,7 @@
           <div class="flex items-center justify-center mt-6 space-x-3">
             <a
               href="#"
-              class="w-10 h-10 transition-all dark:bg-white bg-slate-900 dark:hover:bg-white hover:bg-slate-800 dark:hover:border-0 dark:hover:text-white dark:hover:bg-transparent hover:text-slate-200 rounded-full border-0 border-gray-300 dark:text-slate-900 text-white flex items-center justify-center"
+              class="w-10 h-10 transition-all dark:bg-white bg-slate-900 hover:bg-slate-800 dark:hover:border-0 dark:hover:text-white dark:hover:bg-transparent hover:text-slate-200 rounded-full border-0 border-gray-300 dark:text-slate-900 text-white flex items-center justify-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +124,7 @@
               </svg> </a
             ><a
               href="#"
-              class="w-10 h-10 transition-all dark:bg-white bg-slate-900 dark:hover:bg-white hover:bg-slate-800 dark:hover:border-0 dark:hover:text-white dark:hover:bg-transparent hover:text-slate-200 rounded-full border-0 border-gray-300 dark:text-slate-900 text-white flex items-center justify-center"
+              class="w-10 h-10 transition-all dark:bg-white bg-slate-900 hover:bg-slate-800 dark:hover:border-0 dark:hover:text-white dark:hover:bg-transparent hover:text-slate-200 rounded-full border-0 border-gray-300 dark:text-slate-900 text-white flex items-center justify-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +139,7 @@
             </a>
             <a
               href="#"
-              class="w-10 h-10 transition-all dark:bg-white bg-slate-900 dark:hover:bg-white hover:bg-slate-800 dark:hover:border-0 dark:hover:text-white dark:hover:bg-transparent hover:text-slate-200 rounded-full border-0 border-gray-300 dark:text-slate-900 text-white flex items-center justify-center"
+              class="w-10 h-10 transition-all dark:bg-white bg-slate-900 hover:bg-slate-800 dark:hover:border-0 dark:hover:text-white dark:hover:bg-transparent hover:text-slate-200 rounded-full border-0 border-gray-300 dark:text-slate-900 text-white flex items-center justify-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
