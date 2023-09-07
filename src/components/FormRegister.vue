@@ -3,7 +3,7 @@
     <form @submit="(e) => e.preventDefault()">
       <div class="grid w-full grid-cols-1 gap-5">
         <div
-          class="input-group w-full flex items-center space-x-2 dark:bg-slate-800 bg-gray-200 px-4 rounded-md"
+          class="input-group w-full  focus-within:ring-2 dark:focus-within:ring-cyan-600 ring-slate-600 flex items-center space-x-2 dark:bg-slate-800 bg-gray-200 px-4 rounded-md"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@
           />
         </div>
         <div
-          class="input-group w-full flex items-center space-x-2 dark:bg-slate-800 bg-gray-200 px-4 rounded-md"
+          class="input-group w-full focus-within:ring-2 dark:focus-within:ring-cyan-600 ring-slate-600 flex items-center space-x-2 dark:bg-slate-800 bg-gray-200 px-4 rounded-md"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@
           />
         </div>
         <div
-          class="input-group w-full flex items-center space-x-2 dark:bg-slate-800 bg-gray-200 px-4 rounded-md"
+          class="input-group w-full focus-within:ring-2 dark:focus-within:ring-cyan-600 ring-slate-600 flex items-center space-x-2 dark:bg-slate-800 bg-gray-200 px-4 rounded-md"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
